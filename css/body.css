@@ -1,0 +1,53 @@
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: orange;
+}
+
+.content h4 {
+  font-size: 30px;
+  margin-top: 200px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid orange;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  color: white;
+  background-color: orange;
+  transition: 0.5s;
+}

@@ -1,0 +1,151 @@
+*{
+	/* border: 1px dashed red; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18px;
+	
+}
+
+.wrapper{
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	height: 480px;
+	background: transparent;
+	border: 1px solid orange;
+	border-radius: 10px;
+	backdrop-filter: blur(3px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-position: center;
+	width: 40%;
+	padding: 15px;
+	margin: 0 auto;
+	
+}
+
+.form-box h2{
+	font-size: 40px;
+	color:orange;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper:hover{
+	background-color: black;
+	transition: 1.5s;
+	
+}
+.input-box{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	border-bottom: 2px solid  orange;
+	margin: 50px 0;
+}
+.input-box input{
+	text-align:center;
+}
+.input-box label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-left: 120px;
+	transform: translateY(-50%);
+	font-size: 15px;
+	color: #fff;
+	font-weight: 500;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+	top: -5px;
+	align-items: center;
+}
+
+.input-box input{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	color: #F0FFF0;
+	font-weight: 600;
+}
+
+.btn1{
+	width: 100%;
+	height: 45px;
+	background: orange;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1em;
+	color: #fff;
+	font-weight: 500;
+}
+.btn1:hover{
+	color: orange;
+	background-color: #fff;
+	transition: 0.5s;
+}
+
+.btn2{
+	width: 100%;
+	height: 45px;
+	background: #009688;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1em;
+	color: #fff;
+	font-weight: 500;
+}
+.logo a:hover{
+	color: orange;
+	transition: 0.5s;
+}
+.login-signup{
+	font-size: .9em;
+	color: #F0FFF0;
+	text-align: center;
+	font-weight: 500;
+	margin: 25px 0 10px;
+}
+
+.login-signup p a {
+	color: #F0FFF0;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.login-signup a:hover{
+	text-decoration: underline;
+	color:orange;
+	
+}
+.alert-1{
+	position: absolute;
+	margin-left: 455px;
+	margin-top:100px;
+	text-align: center;
+	padding:80px 30px;
+	font-size: 30px;
+	font-weight: bold;
+	z-index: 1000;
+	height: 40vh;
+	border-radius: 10px;
+	width: 30vw;
+	color:orange;
+	/* text-shadow:; */
+	background-color: #fff;
+}
