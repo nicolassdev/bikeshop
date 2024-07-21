@@ -64,6 +64,10 @@
                     <div class="input-box">
                         <input type="password" name="password" required />
                         <label>Password</label>
+                    </div> 
+                    <div class="input-box">
+                        <input type="password" name="cpassword" required />
+                        <label>Re-type password</label>
                     </div>  
                     <button type="submit" class="btn1" name="submit">Sign up</button>
                     <div class="login-signup">

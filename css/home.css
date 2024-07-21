@@ -34,7 +34,7 @@ body {
   width: 100px;
   height: 12vh;
   border-radius: 50%;
-  margin-right:20px;
+  margin-right: 20px;
 }
 .banner-logo-title h1 {
   /* position: fixed; */
@@ -54,7 +54,7 @@ body {
   list-style-type: none;
 }
 .menu ul li {
-padding-left: 14px;
+  padding-left: 14px;
 }
 .menu ul li a {
   border: 1px solid black;
@@ -142,7 +142,7 @@ padding-left: 14px;
 
 .prof {
   width: 90%;
-  height: 100%;
+  height: 50%;
   margin: 0 auto;
   background-color: #000000;
   align-items: center;
@@ -223,7 +223,7 @@ padding-left: 14px;
   border-radius: 10px;
   padding: 9px 20px 9px 20px;
   font-weight: 900;
-  margin-left: 1  0px;
+  margin-left: 1 0px;
 }
 .prod-detail button:hover {
   background-color: #ffa500;
@@ -247,14 +247,12 @@ padding-left: 14px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
-
 }
-.items h4{
+.items h4 {
   padding-top: 60px;
   padding-left: 350px;
   color: white;
   font-size: 70px;
-
 }
 .item {
   width: 20vw;
@@ -299,7 +297,7 @@ padding-left: 14px;
 }
 
 /* ORDER  */
-.order{
+.order {
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -307,30 +305,31 @@ padding-left: 14px;
   padding-top: 100px;
   padding-bottom: 100px;
   overflow: auto;
-
 }
-.order h1{
-    color: #ffa500;
-    font-size: 50px;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-.table{
+.order h1 {
+  color: #ffa500;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.table {
   overflow-y: auto;
-  width:80% ;
+  width: 80%;
   overflow: auto;
   margin-left: 120px;
-} 
+}
 
-.table table,th,td{
-  border:1px solid black;
+.table table,
+th,
+td {
+  border: 1px solid black;
 }
 .table table {
   margin-bottom: 20px;
 }
 .table table th {
   font-size: 18px;
-  background:#ffa500;
+  background: #ffa500;
   color: white;
   height: 35px;
 }
@@ -340,7 +339,6 @@ padding-left: 14px;
   height: 25px;
   padding: 15px;
   color: #ffa500;
-
 }
 .table table td:nth-child(1) {
   width: 70px;
@@ -363,7 +361,6 @@ padding-left: 14px;
 }
 .table table tr:last-child td {
   border: none;
-  
 }
 
 .table table a {
@@ -387,13 +384,13 @@ padding-left: 14px;
   padding: 10px;
   text-decoration: none;
   color: white;
-  background-color:#ffa500;
+  background-color: #ffa500;
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
 }
-.table a:hover{
-  color:orange;
+.table a:hover {
+  color: orange;
   transition: 0.5s;
   background-color: #fff;
 }
@@ -409,7 +406,7 @@ padding-left: 14px;
   height: 100vh;
   background: transparent;
 }
-.box-message{
+.box-message {
   position: absolute;
   top: 0;
   left: 0;
@@ -434,7 +431,7 @@ padding-left: 14px;
   text-transform: uppercase;
 }
 /* ALERT LOG-OUT MESSAGE */
-.alert-1{
+.alert-1 {
   background: #000000;
   color: #ffa500;
 }

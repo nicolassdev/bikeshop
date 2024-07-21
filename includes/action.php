@@ -15,15 +15,32 @@ if (isset($_POST["add_to_cart"])) {
 // DELETE ITEM IN THE PURCHASE ITEM
 if (isset($_GET["action"]) && $_GET["action"] == "remove") {
     
+    ?>
+    <script>
+          const response = confirm("Are you sure you want to delete that?");
+                    
+          
+                        if ($value["PROD_ID"] == $_GET["id"]) {
+                        alert("Item was deleted");
+                  
+                    } else {
+                        alert("Cancel was pressed");
+                        
+                    }
+                    
 
+            </script>
+    <?php
 
-    foreach ($_SESSION['cart'] as $key => $value) {
-        if ($value["PROD_ID"] == $_GET["id"]) {
-            unset($_SESSION['cart'][$key]);
-        }
-    }
-    header("location:index.php?page=order&remove=deleted");
-    exit();
+    // foreach ($_SESSION['cart'] as $key => $value) {
+    //     if ($value["PROD_ID"] == $_GET["id"]) {
+    //         unset($_SESSION['cart'][$key]);
+    //     }
+    // }
+     
+    
+    // header("location:index.php?page=order&remove=deleted");
+    // exit();
 }
 
 if (isset($_GET["remove"])) {

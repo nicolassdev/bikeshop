@@ -17,7 +17,7 @@ class Fsite{
         function connect(){
             if(!$this->con){
                 $this->con = mysqli_connect($this->hostname, $this->username, $this->password, $this->dbname);
-                return true;
+                return false;
             }else{
                 return true;
             }
@@ -87,6 +87,9 @@ class Fsite{
             }
         }
 
+        //CHECK ORIG PASSWORD
+
+    
 
         //INSERT INTO TABLE
     function insert($table, $values){
@@ -127,6 +130,30 @@ class Fsite{
         }
     }
 
+
+        // CHECK TABLE COUNT ROW CUSTOMER
+    function rowCountCustomer($name,$lname)
+    {
+        if ($name && $lname  ) {
+            $query = "SELECT * FROM `customer` WHERE `CUS_NAME` = '$name'";
+            
+            $query = "SELECT * FROM `customer` WHERE `CUS_LNAME` = '$lname'";
+        } else {
+            $query = "SELECT * FROM `customer`";
+        }
+
+        $result = $this->con->query($query);
+
+        if (mysqli_num_rows($result) > 0) {
+            return mysqli_num_rows($result);
+        } else {
+            return false;
+        }
+    }
+
+    
+   
+
       //CHECK USER LOGIN
     function check_login($username, $password){
         $username = mysqli_real_escape_string($this->con, $username);
@@ -166,15 +193,16 @@ class Fsite{
         $stored = ($this->con->query($sql))->fetch_assoc();
         return $stored;
     }
+    
 
-       // GET CUSTOMER
+       // GET CUSTOMER ID
     function getCustomer($row, $value)
     {
         $sql = "SELECT * FROM `customer` WHERE `$row` = '$value'";
         $stored = ($this->con->query($sql))->fetch_assoc();
         return $stored;
     }
-
+  
 
         // GET CUSTOMER ORDER
     function getCustomerOrder($row, $value)
