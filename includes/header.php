@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikeshop</title>
+    <link rel="website icon" type="jpg" href="img/shoplogo.jpg">
     <link rel="stylesheet" href="css/home.css?v=<?php echo time(); ?>" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

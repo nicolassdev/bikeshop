@@ -14,33 +14,34 @@ if (isset($_POST["add_to_cart"])) {
 }
 // DELETE ITEM IN THE PURCHASE ITEM
 if (isset($_GET["action"]) && $_GET["action"] == "remove") {
-    
-    ?>
-    <script>
-          const response = confirm("Are you sure you want to delete that?");
-                    
-          
-                        if ($value["PROD_ID"] == $_GET["id"]) {
-                        alert("Item was deleted");
-                  
-                    } else {
-                        alert("Cancel was pressed");
-                        
-                    }
-                    
 
-            </script>
-    <?php
+?>
+    <!-- <script>
+        const response = confirm("Are you sure you want to delete that?");
 
-    // foreach ($_SESSION['cart'] as $key => $value) {
-    //     if ($value["PROD_ID"] == $_GET["id"]) {
-    //         unset($_SESSION['cart'][$key]);
-    //     }
-    // }
-     
-    
-    // header("location:index.php?page=order&remove=deleted");
-    // exit();
+
+        if ($value["PROD_ID"] == $_GET["id"]) {
+            unset($_SESSION['cart'][$key]);
+            alert("Item was deleted");
+
+        } else {
+            alert("Cancel was pressed");
+
+        }
+    </script> -->
+<?php
+
+    foreach ($_SESSION['cart'] as $key => $value) {
+
+        if ($value["PROD_ID"] == $_GET["id"]) {
+
+            unset($_SESSION['cart'][$key]);
+        }
+    }
+
+
+    header("location:index.php?page=order&remove=deleted");
+    exit();
 }
 
 if (isset($_GET["remove"])) {
@@ -61,8 +62,10 @@ if (isset($_GET["remove"])) {
 if (isset($_GET["action"]) && $_GET["action"] == "purchase") {
     $fgmember->connect();
     foreach ($_SESSION['cart'] as $key => $value) {
-        $fgmember->insert("orders", array($fgmember->randomOrderID(), date("Y-m-d"),
-         $_SESSION["CUS_ID"], $value["PROD_ID"], $value["PROD_QUANTITY"],($value["PROD_PRICE"] * $value["PROD_QUANTITY"])));
+        $fgmember->insert("orders", array(
+            $fgmember->randomOrderID(), date("Y-m-d"),
+            $_SESSION["CUS_ID"], $value["PROD_ID"], $value["PROD_QUANTITY"], ($value["PROD_PRICE"] * $value["PROD_QUANTITY"])
+        ));
     }
     unset($_SESSION['cart']);
     header("location:index.php?page=order&success=purchaseSuccesfully");

@@ -229,6 +229,12 @@ body {
   background-color: #ffa500;
   color: white;
 }
+.prod-title {
+  font-size: 30px;
+  color: orange;
+  padding-top: 50px;
+  font-weight: bold;
+}
 .prod-detail a {
   text-decoration: none;
   color: #ffa500;
@@ -242,6 +248,7 @@ body {
   background-color: #ffa500;
   color: white;
 }
+
 /* PRODUC NAME , DESCRIPTION, QUANTITY AND ADD TO CARD DESIGN */
 .items {
   display: flex;
